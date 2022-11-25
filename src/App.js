@@ -27,7 +27,7 @@ function App() {
       <TodoList>
         {todos.map((todo) => (
           // Cuando hacemos render de una lista en este caso todo's-items, tenemos que enviarle una propiedad especial que se llama "key" a nuestros componentes para que React pueda identificar cual componente es cual dentro de una lista.  
-          <TodoItem key={todo.text} text={todo.text} />
+          <TodoItem key={todo.text} text={todo.text} completed={todo.completed}/>
         ))}
       </TodoList>
 
