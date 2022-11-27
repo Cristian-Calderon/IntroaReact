@@ -9,7 +9,7 @@ import { TodoList } from "./TodoList";
 import { TodoItem } from "./TodoItem";
 
 // crear una lista falsa
-const todos = [
+const Defaulttodos = [
   { text: "Cortar cebolla", completed: false },
   { text: "Tomar el curso Intro a React", completed: false },
   { text: "Llorar con la Lloronas", completed: false },
@@ -17,12 +17,26 @@ const todos = [
 
 // funcion que comienza con una letra mayuscula es un componente.
 function App() {
+  const [todos, setTodo] = React.useState(Defaulttodos)
+  const [searchValue, setSearchValue] = React.useState('');
+
+  const completedTodos = todos.filter(todos.filter(todo => !!todo.completed).length)
+  const totalTodos = todos.length;
+
+
   return (
     // React nos indica que puede recibir solo 1 elemento de html para renderizarlo.
     <React.Fragment>
-      <TodoCounter />
+      <TodoCounter 
+      total = {totalTodos}
+      completed = {completedTodos}
+      />
 
-      <TodoSearch />
+      <TodoSearch 
+      // si enviamos sin valor React nos entendera que es true y eso es lo que no queremos.
+      searchValue = {searchValue}
+      setSearchValue = {setSearchValue}
+      />
 
       <TodoList>
         {todos.map((todo) => (

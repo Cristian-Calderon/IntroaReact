@@ -3,11 +3,11 @@ import "./todoitem.css";
 
 function TodoItem(props) {
   const onComplete = () => {
-    alert("Ya completaste el todo" + props.text);
+    alert("Ya completaste el todo " + props.text);
   };
 
   const onDelete = () => {
-    alert("Borraste el todo" + props.text);
+    alert("Borraste el todo " + props.text);
   };
 
   return (
