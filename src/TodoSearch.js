@@ -3,7 +3,6 @@ import './todosearch.css'
 
 
 function TodoSearch ({searchValue, setSearchValue}){
-    
     const onSearchValueChange = (event) =>{
         // console.log(event.target.value)
         setSearchValue(event.target.value)
@@ -13,10 +12,7 @@ function TodoSearch ({searchValue, setSearchValue}){
         <input className="TodoSearch"
         onChange = {onSearchValueChange}
         value={searchValue}
-        placeholder = "Cebolla" />,
-
-        <p>{searchValue}</p>
-
+        placeholder = "Cebolla" />
     );
 }
 
