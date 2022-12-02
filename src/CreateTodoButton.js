@@ -3,14 +3,15 @@ import './createtodobutton.css'
 
 
 function CreateTodoButton (){
-    const onClickButton =  (prop) => {
-        alert(prop)
+    // funcion alert
+    const onClickButton =  (mensaje) => {
+        alert(mensaje)
     }
 
     return(
         <button 
         className="CreateTodoButton"
-        // Estamos llamando a la funcion de arriba
+        // En onClick tenemos que enviarle una funcion.
         onClick={() => onClickButton('Aqui deberia abrirse un modal')}
         >
         +

@@ -2,6 +2,7 @@ import React from "react";
 import "./todoitem.css";
 
 function TodoItem(props) {
+  
   const onComplete = () => {
     alert("Ya completaste el todo " + props.text);
   };
