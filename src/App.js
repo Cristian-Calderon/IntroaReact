@@ -18,6 +18,8 @@ const DefaultTodos = [
 // funcion que comienza con una letra mayuscula es un componente.
 function App() {
   const [todos, setTodos] = React.useState(DefaultTodos)
+
+  // todoSearch
   const [searchValue, setSearchValue] = React.useState('');
 
   const completedTodos = todos.filter(todo => !!todo.completed).length
