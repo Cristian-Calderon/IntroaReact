@@ -8,11 +8,12 @@ import { CreateTodoButton } from "./CreateTodoButton";
 import { TodoList } from "./TodoList";
 import { TodoItem } from "./TodoItem";
 
-// crear una lista falsa
+// DefaultTodos estado inicial
 const DefaultTodos = [
   { text: "Cortar cebolla", completed: false },
   { text: "Tomar el curso Intro a React", completed: false },
   { text: "Llorar con la Lloronas", completed: false },
+  { text: "Completar RankApp", completed: false}
 ];
 
 // funcion que comienza con una letra mayuscula es un componente.
@@ -22,13 +23,17 @@ function App() {
   // todoSearch
   const [searchValue, setSearchValue] = React.useState('');
 
+
+  // Para contar los todos que tenemos completados y cuantos tenemos en total.
   const completedTodos = todos.filter(todo => !!todo.completed).length
   const totalTodos = todos.length;
 
-  // Esta vacio 
+  // El array vacio sirve para ver el filtrado.
   let searchedTodos = []
   
+  // searchValue es el input 
   if(!searchValue.length >= 1){
+    // searchValue no es nada, entonces QUE NOS MUESTRE TODOS LOS "todos"
     searchedTodos = todos;
   } else{
     searchedTodos = todos.filter(todo =>{
