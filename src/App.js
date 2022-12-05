@@ -33,7 +33,7 @@ function App() {
   
   // searchValue es el input 
   if(!searchValue.length >= 1){
-    // searchValue no es nada, entonces QUE NOS MUESTRE TODOS LOS "todos"
+    // searchValue no es nada, entonces QUE NOS MUESTRE TODOS LOS "to-dos"
     searchedTodos = todos;
   } else{
     searchedTodos = todos.filter(todo =>{
