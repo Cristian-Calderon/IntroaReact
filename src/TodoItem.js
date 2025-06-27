@@ -1,31 +1,26 @@
-import React from "react";
 import "./todoitem.css";
+import checkIcon from "./assets/comprobar.png";
+import cancelIcon from "./assets/cancelar.png";
 
 function TodoItem(props) {
-  
-  const onComplete = () => {
-    alert("Ya completaste el todo " + props.text);
-  };
-
-  const onDelete = () => {
-    alert("Borraste el todo " + props.text);
-  };
-
   return (
-    <li className="TodoItem">
-      <span
-        className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
-        onClick={onComplete}
-      >
-        √
-      </span>
-      <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
-        {props.text}
-      </p>
-      <span className="Icon Icon-delete" onClick={onDelete}>
-        X
-      </span>
-    </li>
+    <div className="TodoItem-main-container">
+      <li className="TodoItem-container">
+        <img
+          src={checkIcon}
+          alt="check"
+          className={`TodoItem-check ${
+            props.completed && "icon-check--active"
+          }`}
+        />
+        <p className={`${props.completed && "todoitem-p--complete"}`}>{props.text}</p>
+        <img
+          src={cancelIcon}
+          alt="cancel"
+          className="TodoItem-cancel icon-delete"
+        />
+      </li>
+    </div>
   );
 }
 

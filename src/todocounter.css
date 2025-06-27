@@ -1,6 +1,20 @@
+.TodoCounter-main-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.TodoCounter-container {
+display: flex;
+align-self: center;
+justify-content: center;
+align-items: center;
+background-color: white;
+height: 70px;
+width: 90%;
+border-radius: 5px;
+}
+
 .TodoCounter {
-    font-size: 24px;
-    text-align: center;
-    margin: 0;
-    padding: 48px;
-  }
+  color: #2461cc;
+  margin: 0;
+}

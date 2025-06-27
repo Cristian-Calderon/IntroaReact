@@ -1,22 +1,19 @@
 import React from "react";
-import './createtodobutton.css'
+import "./createtodobutton.css";
 
-
-function CreateTodoButton (){
-    // funcion alert
-    const onClickButton =  (mensaje) => {
-        alert(mensaje)
-    }
-
-    return(
-        <button 
-        className="CreateTodoButton"
-        // En onClick tenemos que enviarle una funcion.
-        onClick={() => onClickButton('Aqui deberia abrirse un modal')}
-        >
-        +
-        </button>
-    )
+function CreateTodoButton() {
+  return (
+    <button
+      className="CreateTodoButton"
+      onClick={(event) => {
+        console.log("Click");
+        console.log(event.target);
+        
+      }}
+    >
+      Add
+    </button>
+  );
 }
 
-export {CreateTodoButton}
+export { CreateTodoButton };
